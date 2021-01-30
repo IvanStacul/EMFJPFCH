@@ -36,7 +36,7 @@
           <li><a href="{{ route('becas') }}">Becas para especialización</a></li>
           <li><a href="{{ route('ayuda') }}">Ayuda Solidaria</a></li>
           <li><a href="{{ route('subsidios.nacimientos') }}">Subsidios por nacimiento</a></li>
-          <li><a href="{{ route('subsidios.casamiento') }}">Subsidios por matrimonio</a></li>
+          <li><a href="{{ route('subsidios.matrimonio') }}">Subsidios por matrimonio</a></li>
         </ul>
       </div>
     </div>

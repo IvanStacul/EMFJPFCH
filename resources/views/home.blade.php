@@ -213,7 +213,7 @@
 
         <!-- Subsidios por matrimonio -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="{{ route('subsidios.casamiento') }}">
+          <a class="panel panel-default" href="{{ route('subsidios.matrimonio') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">

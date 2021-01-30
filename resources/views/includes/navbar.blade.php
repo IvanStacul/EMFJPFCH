@@ -20,7 +20,7 @@
         <!-- NAVBAR -->
         <div class="collapse navbar-collapse" id="main-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class=""><a href="#">Inicio</a></li>
+            <li class=""><a href="{{ route('home') }}">Inicio</a></li>
             <li class=""><a href="#">Autoridades</a></li>
             <li class=""><a href="#">Resoluciones</a></li>
             <li class=""><a href="#">Circunscripciones</a></li>
