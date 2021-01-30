@@ -11,7 +11,7 @@
         <ul>
           <li><a href="#">Autoridades</a></li>
           <li><a href="#">Resoluciones</a></li>
-          <li><a href="#">Circunscripciones</a></li>
+          <li><a href="{{ route('circunscripciones') }}">Circunscripciones</a></li>
           <li><a href="#">Competencias y montos</a></li>
           <li><a href="#">Balances</a></li>
           <li><a href="#">Afiliación a la entidad</a></li>

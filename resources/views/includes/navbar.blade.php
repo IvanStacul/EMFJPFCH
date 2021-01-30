@@ -23,7 +23,7 @@
             <li class=""><a href="{{ route('home') }}">Inicio</a></li>
             <li class=""><a href="#">Autoridades</a></li>
             <li class=""><a href="#">Resoluciones</a></li>
-            <li class=""><a href="#">Circunscripciones</a></li>
+            <li class=""><a href="{{ route('circunscripciones') }}">Circunscripciones</a></li>
           </ul>
         </div>
       </div>

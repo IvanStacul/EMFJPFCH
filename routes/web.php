@@ -76,3 +76,13 @@ Route::view(
   'reglamentos.nacimientos',
   ['title' => 'Reglamento del servicio del subsidio por nacimiento']
 )->name('reglamentos.subsidios.nacimientos');
+
+
+// NAVBAR ROUTES
+
+Route::view(
+  'circunscripciones',
+  'circunscripciones',
+  ['title' => 'Circunscripciones']
+)->name('circunscripciones');
+
