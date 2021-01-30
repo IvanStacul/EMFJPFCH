@@ -305,7 +305,7 @@
   <!-- fin videos -->
 
   <!-- inicio contacto -->
-  <section class="bg-gray">
+  <section class="bg-gray" id="contacto">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -356,36 +356,37 @@
         </div>
 
         <div class="col-sm-7">
-          <form action="#" method="POST">
-            @csrf
 
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <input class="form-control" id="asunto" name="subject" placeholder="Asunto" type="text"
-                  value="{{ old('subject', 'Consulta') }}" required/>
-                @if($errors->any())
-                <p class="help-block error">{!! $errors->first('subject') !!}</p>
-                @endif
-
+          @if (session('status'))
+              <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Exito</h4>
+                <p>{{session('status')}}</p>
               </div>
+          @endif
+
+
+          <form action="{{ route('contact') }}" method="POST">
+            @csrf
+            <div class="row">
+
               <div class="col-sm-6 form-group">
-                <input class="form-control" id="email" name="email" placeholder="Email" type="email"
-                  value="{{ old('email','ivan@stacul.com.ar') }}" required/>
-                @if($errors->any())
-                <p class="help-block error">{!! $errors->first('email') !!}</p>
-                @endif
+                <input class="form-control" id="subject" name="subject" placeholder="Asunto" type="text" required />
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
               </div>
             </div>
-            <textarea class="form-control" id="consulta" name="content" placeholder="Escriba su consulta"
-              rows="5" required>{{ old('content', 'Mensaje...') }}</textarea><br />
-            @if($errors->any())
-            <p class="help-block error">{!! $errors->first('content') !!}</p>
-            @endif
+
+            <textarea class="form-control" id="content" name="content" placeholder="Escriba su consulta"
+              rows="5" required></textarea><br />
+
             <div class="row">
               <div class="col-sm-12 form-group">
-                <input class="btn btn-ctm pull-right" name="enviar" type="submit" value="Enviar">
+                <button class="btn btn-ctm pull-right" type="submit">Enviar</button>
               </div>
             </div>
+
           </form>
         </div>
 
