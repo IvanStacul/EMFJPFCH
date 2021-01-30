@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AmountsController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])
@@ -96,5 +97,9 @@ Route::view(
   ['title' => 'Balances']
 )->name('balances');
 
-Route::get('montos', AmountsController::class)
-  ->name('montos');
+Route::get(
+  'montos',
+  AmountsController::class
+)->name('montos');
+
+Auth::routes();
