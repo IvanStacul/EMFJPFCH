@@ -140,7 +140,7 @@
 
         <!-- Convenio con Hoteles -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="#">
+          <a class="panel panel-default" href="{{ route('hoteles.convenios') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">
@@ -159,7 +159,7 @@
 
         <!-- Hoteles asociados -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="#">
+          <a class="panel panel-default" href="{{ route('hoteles.precios') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">
@@ -178,7 +178,7 @@
 
         <!-- Becas para especialización -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="#">
+          <a class="panel panel-default" href="{{ route('becas') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">
@@ -197,7 +197,7 @@
 
         <!-- Subsidios por nacimiento -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="#">
+          <a class="panel panel-default" href="{{ route('subsidios.nacimientos') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">
@@ -213,7 +213,7 @@
 
         <!-- Subsidios por matrimonio -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="#">
+          <a class="panel panel-default" href="{{ route('subsidios.casamiento') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">
@@ -229,7 +229,7 @@
 
         <!-- Ayuda solidaria -->
         <div class="col-xs-12 col-md-6 col-lg-4">
-          <a class="panel panel-default" href="#">
+          <a class="panel panel-default" href="{{ route('ayuda') }}">
             <div class="panel-body">
               <div class="media">
                 <div class="media-left padding-5">
@@ -317,7 +317,6 @@
         <!-- DATOS DE CONTACTO -->
         <div class="col-xs-12 col-sm-5">
           <div>
-            <h3 class="h4">Casa central</h3>
             <p>
               <i class="icono-arg-marcador-ubicacion-2" aria-hidden="true"></i>
               <strong>Dirección:</strong> Mariano Moreno Nº711 – Charata – Chaco
