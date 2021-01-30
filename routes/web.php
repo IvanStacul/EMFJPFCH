@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivationTokenController;
 use App\Http\Controllers\AmountsController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -102,4 +103,12 @@ Route::get(
   AmountsController::class
 )->name('montos');
 
+
+// ------------------AUTH ROUTES------------------
+
 Auth::routes();
+
+Route::get(
+  'activate/{token}',
+  [ActivationTokenController::class, 'activate']
+)->name('activate');

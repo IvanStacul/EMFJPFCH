@@ -24,6 +24,22 @@
             <li class=""><a href="#">Autoridades</a></li>
             <li class=""><a href="#">Resoluciones</a></li>
             <li class=""><a href="{{ route('circunscripciones') }}">Circunscripciones</a></li>
+            @guest
+              <li class=""><a href="{{ route('login') }}">Iniciar sesion</a></li>
+            @else
+            <li>
+              <a href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                Cerrar sesion
+              </a>
+
+              <form hidden id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+              </form>
+            </li>
+
+            @endguest
           </ul>
         </div>
       </div>
