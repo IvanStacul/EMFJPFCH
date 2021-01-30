@@ -1,9 +1,7 @@
 :root {
   --primary-color: #9c27b0;
 }
-img{
-  width:100%;
-}
+
 .navbar-default .nav > li > a {
   color: var(--primary-color);
   font-size: 17px;

@@ -10,6 +10,13 @@
           <span class="icon-bar"></span>
         </button>
 
+        <!-- LOGO -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href=" {{ route('home') }} " aria-label="Logo">
+            <img src="{{ asset('img/logo.png') }}" alt="Logo de EMFJPFCH" height="100%" />
+          </a>
+        </div>
+
         <!-- NAVBAR -->
         <div class="collapse navbar-collapse" id="main-navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
