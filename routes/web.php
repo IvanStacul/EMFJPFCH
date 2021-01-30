@@ -3,6 +3,7 @@
 use App\Http\Controllers\ActivationTokenController;
 use App\Http\Controllers\AmountsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PanelController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -112,3 +113,9 @@ Route::get(
   'activate/{token}',
   [ActivationTokenController::class, 'activate']
 )->name('activate');
+
+
+// ------------------ADMIN ROUTES------------------
+Route::get('panel', PanelController::class)
+  ->name('admin.panel')
+  ->middleware('auth');
