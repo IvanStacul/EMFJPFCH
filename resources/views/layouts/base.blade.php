@@ -8,7 +8,9 @@
 
   <title> {{$title}} </title>
 
-  <link rel="icon" href="{{ asset('img/favicon.png') }}" />
+  <link rel="icon" href="{{ asset('favicon.png') }}" />
+
+  @yield('styles')
 
   <!-- Fuente Tipográfica - Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet" />
@@ -36,6 +38,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   {{-- <script src="{{ asset('js/jquery.min.js') }}"></script> --}}
   {{-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> --}}
+
+  @yield('scripts')
 
 </body>
 
