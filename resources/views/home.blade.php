@@ -37,21 +37,21 @@
       </li>
 
       <li class="active">
-        <a href="#">
+        <a href="{{ route('montos') }}">
           <i class="icono-arg-pesos bg-success"></i>
           <span>Competencias y montos</span>
         </a>
       </li>
 
       <li class="active">
-        <a href="#">
+        <a href="{{ route('balances') }}">
           <i class="icono-arg-informes-y-estadisticas bg-info"></i>
           <span>Balances</span>
         </a>
       </li>
 
       <li class="active">
-        <a href="#" target="_blank">
+        <a href="{{ asset('docs/REVISTA.pdf') }}" target="_blank">
           <i class="icono-arg-revista bg-fucsia"></i>
           <span>Revista Institucional</span>
         </a>

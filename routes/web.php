@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AmountsController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -86,3 +87,14 @@ Route::view(
   ['title' => 'Circunscripciones']
 )->name('circunscripciones');
 
+
+// ATAJOS
+
+Route::view(
+  'balance',
+  'atajos.balance',
+  ['title' => 'Balances']
+)->name('balances');
+
+Route::get('montos', AmountsController::class)
+  ->name('montos');
