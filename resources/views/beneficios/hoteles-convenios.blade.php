@@ -233,7 +233,7 @@
                             </p>
 
                             <p>
-                              <a class="btn btn-ctm btn-block" href="#">
+                              <a class="btn btn-ctm btn-block" href="{{ route('hoteles.precios') }}">
                                 HOTELES Y PRECIOS
                               </a>
                             </p>

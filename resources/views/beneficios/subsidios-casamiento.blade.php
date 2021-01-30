@@ -229,13 +229,11 @@
                         <div class="panel panel-default panel-disabled">
                           <div class="panel-body text-center">
                             <p>
-                              <strong>
-                                Antes de considerar solicitarlo, leer
-                                atentamente la reglamentación del beneficio.
-                              </strong>
+                              Antes de considerar solicitarlo, leer
+                              atentamente la reglamentación del beneficio.
                             </p>
                             <p>
-                              <a class="btn btn-ctm btn-block text-uppercase" href="#">
+                              <a class="btn btn-ctm btn-block text-uppercase" href="{{ route('reglamentos.subsidios.matrimonio') }}">
                                 REGLAMENTO
                               </a>
                             </p>

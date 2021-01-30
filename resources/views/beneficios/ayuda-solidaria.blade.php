@@ -225,7 +225,11 @@
                         <div class="panel panel-default panel-disabled">
                           <div class="panel-body text-center">
                             <p>
-                              <a class="btn btn-ctm btn-block text-uppercase" href="#">
+                              Antes de considerar solicitarlo, leer
+                              atentamente la reglamentación del beneficio.
+                            </p>
+                            <p>
+                              <a class="btn btn-ctm btn-block text-uppercase" href="{{ route('reglamentos.subsidios.ayuda') }}">
                                 REGLAMENTO
                               </a>
                             </p>
