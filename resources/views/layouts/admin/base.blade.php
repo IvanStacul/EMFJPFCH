@@ -8,7 +8,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>Panel de Administración</title>
-  <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
+  <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
    <!-- DataTables -->

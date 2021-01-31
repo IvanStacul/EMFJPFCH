@@ -29,5 +29,9 @@ class AuthServiceProvider extends ServiceProvider
     Gate::define('panel-access', function ($user) {
       return $user->active == true && in_array($user->role,['admin','superadmin']);
     });
+
+    Gate::define('restore-news', function ($user) {
+      return $user->role == 'superadmin';
+    });
   }
 }

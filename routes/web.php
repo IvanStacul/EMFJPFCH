@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ActivationTokenController, AmountsController, HomeController, NewsController, PanelController, VideoController};
+use App\Http\Controllers\{ActivationTokenController, AmountsController, HomeController, NewsController, PanelController, TrashController, VideoController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -133,4 +133,22 @@ Route::resource('panel/noticias', NewsController::class)
 
 Route::resource('panel/videos', VideoController::class)
   ->except('show', 'index')
+  ->middleware('auth');
+
+Route::patch(
+  'panel/noticias/{id}/restore',
+  [NewsController::class, 'restore']
+)
+  ->name('noticias.restore')
+  ->middleware('auth');
+
+Route::delete(
+  'panel/noticias/{id}/forceDelete',
+  [NewsController::class, 'forceDelete']
+)
+  ->name('noticias.forceDelete')
+  ->middleware('auth');
+
+Route::get('panel/papelera', TrashController::class)
+  ->name('papelera')
   ->middleware('auth');

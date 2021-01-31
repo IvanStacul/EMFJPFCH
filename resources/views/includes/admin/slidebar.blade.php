@@ -127,12 +127,14 @@
           </ul>
         </li>
 
+        @can('restore-news')
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('papelera') }}" class="nav-link">
             <i class="fa fa-recycle nav-icon"></i>
             <p>Papelera</p>
           </a>
         </li>
+        @endcan
 
       </ul>
     </nav>
