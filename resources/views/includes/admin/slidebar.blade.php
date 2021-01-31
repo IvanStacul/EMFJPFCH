@@ -31,7 +31,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{ route('noticias.create') }}" class="nav-link">
                 <i class="far fa-hand-paper nav-icon"></i>
                 <p>Cargar a mano</p>
               </a>

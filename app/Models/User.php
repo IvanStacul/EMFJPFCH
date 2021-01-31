@@ -41,6 +41,15 @@ class User extends Authenticatable
     'email_verified_at' => 'datetime',
   ];
 
+
+  /**
+   * Get posts associated with the user.
+   */
+  public function news()
+  {
+    return $this->hasMany(News::class);
+  }
+
   /**
    * Activate the user.
    */

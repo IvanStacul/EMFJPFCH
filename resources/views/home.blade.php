@@ -84,12 +84,12 @@
 
         $class1 = $counter<2 ? 'col-md-6' : 'col-md-4' ; $class2=$counter<2 ? 'panel-lg' : 'panel-md' ; $counter++;
           @endphp <div class="col-xs-12 {{$class1}}">
-          <a class="panel panel-default {{$class2}}" href="#">
-            <div style="background-image: url({{'portadas/' . $noticia->cover_page }} )" class="panel-heading img">
+          <a class="panel panel-default {{$class2}}" href="{{ route('noticias.show', $noticia) }}">
+            <div style="background-image: url({{'storage/' . $noticia->cover_page }} )" class="panel-heading img">
             </div>
 
             <div class="panel-body">
-              <time aria-hidden="true"> {{ reemplazarFecha($noticia->created_at) }} </time>
+              <time aria-hidden="true"> {{ reemplazarFecha($noticia->date) }} </time>
               <h3 class="h3_title">{{ $noticia->title }}</h3>
               <p> {{ $noticia->summary }}</p>
             </div>
@@ -103,7 +103,7 @@
     <!-- BOTÓN MÁS NOTICIAS-->
     <div class="row">
       <div class="col-xs-12 btn-cont">
-        <a class="btn btn-ctm" href="#">Más noticias</a>
+        <a class="btn btn-ctm" href="{{ route('noticias.userIndex') }}">Más noticias</a>
       </div>
     </div>
 

@@ -1,9 +1,6 @@
 <?php
 
-use App\Http\Controllers\ActivationTokenController;
-use App\Http\Controllers\AmountsController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PanelController;
+use App\Http\Controllers\{ActivationTokenController, AmountsController, HomeController, NewsController, PanelController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +10,11 @@ Route::get('/', [HomeController::class, 'index'])
 Route::post('contact', [HomeController::class, 'sendMail'])
   ->name('contact');
 
+Route::get('noticias/todas', [NewsController::class, 'userIndex'])
+  ->name('noticias.userIndex');
+
+Route::get('noticias/{news}', [NewsController::class, 'show'])
+  ->name('noticias.show');
 
 // ------------------ONLY VIEWS ROUTES------------------
 
@@ -118,4 +120,9 @@ Route::get(
 // ------------------ADMIN ROUTES------------------
 Route::get('panel', PanelController::class)
   ->name('admin.panel')
+  ->middleware('auth');
+
+Route::resource('panel/noticias', NewsController::class)
+  ->except('show')
+  ->parameters(['noticias' => 'news'])
   ->middleware('auth');

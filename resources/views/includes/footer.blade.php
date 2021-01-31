@@ -23,7 +23,7 @@
         <h4>Información</h4>
         <ul>
           <li><a href="{{ route('hoteles.precios') }}">Hoteles asociados</a></li>
-          <li><a href="#">Noticias</a></li>
+          <li><a href="{{ route('noticias.userIndex') }}">Noticias</a></li>
           <li><a href="#">Videos</a></li>
         </ul>
       </div>
