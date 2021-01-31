@@ -104,7 +104,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{ route('autoridades.index') }}" class="nav-link">
                 <i class="fa fa-users-cog nav-icon"></i>
                 <p>Autoridades</p>
               </a>

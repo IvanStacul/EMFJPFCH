@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ActivationTokenController, AmountsController, HomeController, NewsController, PanelController, TrashController, VideoController};
+use App\Http\Controllers\{ActivationTokenController, AmountsController, AuthorityController, HomeController, NewsController, PanelController, TrashController, VideoController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -88,6 +88,8 @@ Route::view(
 
 
 // NAVBAR ROUTES
+Route::get('autoridades', [AuthorityController::class, 'page'])
+  ->name('autoridades');
 
 Route::view(
   'circunscripciones',
@@ -133,6 +135,11 @@ Route::resource('panel/noticias', NewsController::class)
 
 Route::resource('panel/videos', VideoController::class)
   ->except('show', 'index')
+  ->middleware('auth');
+
+Route::resource('panel/autoridades', AuthorityController::class)
+  ->except('show')
+  ->parameter('autoridades', 'authority')
   ->middleware('auth');
 
 Route::patch(

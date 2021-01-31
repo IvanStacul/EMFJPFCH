@@ -9,7 +9,7 @@
       <div class="col-md-3 col-sm-6">
         <h4>Institucional</h4>
         <ul>
-          <li><a href="#">Autoridades</a></li>
+          <li><a href="{{ route('autoridades') }}">Autoridades</a></li>
           <li><a href="#">Resoluciones</a></li>
           <li><a href="{{ route('circunscripciones') }}">Circunscripciones</a></li>
           <li><a href="{{ route('montos') }}">Competencias y montos</a></li>
