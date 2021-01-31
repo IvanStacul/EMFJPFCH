@@ -24,7 +24,7 @@
         <ul>
           <li><a href="{{ route('hoteles.precios') }}">Hoteles asociados</a></li>
           <li><a href="{{ route('noticias.userIndex') }}">Noticias</a></li>
-          <li><a href="#">Videos</a></li>
+          <li><a href="{{ route('videos.index') }}">Videos</a></li>
         </ul>
       </div>
 

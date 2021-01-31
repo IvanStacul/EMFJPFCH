@@ -268,7 +268,7 @@
 
           <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe src="https://www.youtube.com/embed/{{$video->link}}"
+              <iframe src="https://www.youtube.com/embed/{{$video->url}}"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
               </iframe>
             </div>
@@ -282,7 +282,7 @@
         <!-- BOTÓN MÁS VIDEOS -->
         <div class="row">
           <div class="col-xs-12 btn-cont">
-            <a class="btn btn-ctm" href="#">Más videos</a>
+            <a class="btn btn-ctm" href="{{ route('videos.index') }}">Más videos</a>
           </div>
         </div>
 

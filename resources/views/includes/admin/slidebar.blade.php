@@ -78,7 +78,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('videos.create') }}" class="nav-link">
             <i class="fa fa-video nav-icon"></i>
             <p>
               Videos

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ActivationTokenController, AmountsController, HomeController, NewsController, PanelController};
+use App\Http\Controllers\{ActivationTokenController, AmountsController, HomeController, NewsController, PanelController, VideoController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +15,9 @@ Route::get('noticias/todas', [NewsController::class, 'userIndex'])
 
 Route::get('noticias/{news}', [NewsController::class, 'show'])
   ->name('noticias.show');
+
+Route::get('videos', [VideoController::class, 'index'])
+  ->name('videos.index');
 
 // ------------------ONLY VIEWS ROUTES------------------
 
@@ -109,7 +112,8 @@ Route::get(
 
 // ------------------AUTH ROUTES------------------
 
-Auth::routes();
+// Auth::routes(['login', 'logout', 'register', 'reset', 'confirm', 'verify']);
+Auth::routes(['register', 'reset', 'confirm', 'verify']);
 
 Route::get(
   'activate/{token}',
@@ -125,4 +129,8 @@ Route::get('panel', PanelController::class)
 Route::resource('panel/noticias', NewsController::class)
   ->except('show')
   ->parameters(['noticias' => 'news'])
+  ->middleware('auth');
+
+Route::resource('panel/videos', VideoController::class)
+  ->except('show', 'index')
   ->middleware('auth');
