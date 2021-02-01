@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ActivationTokenController, AmountsController, AuthorityController, CaseLawController, CategoryController, HomeController, NewsController, PanelController, TrashController, VideoController};
+use App\Http\Controllers\{ActivationTokenController, AmountsController, AuthorityController, CaseLawController, CategoryController, HomeController, MembershipApplicationController, NewsController, PanelController, TrashController, VideoController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -101,7 +101,23 @@ Route::view(
 )->name('circunscripciones');
 
 
-// ATAJOS
+
+// ------------------SHORTCUTS ROUTES------------------
+Route::view(
+  'afiliacion',
+  'atajos.afiliacion.info',
+  ['title' => 'EMFJPFCH | Afiliación']
+)->name('afiliacion.info');
+
+Route::get(
+  'afiliacion/formulario',
+  [MembershipApplicationController::class, 'create']
+)->name('afiliacion.create');
+
+Route::post(
+  'afiliacion/formulario',
+  [MembershipApplicationController::class, 'store']
+)->name('afiliacion.store');
 
 Route::view(
   'balance',
