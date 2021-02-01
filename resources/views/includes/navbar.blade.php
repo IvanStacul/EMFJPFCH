@@ -22,7 +22,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class=""><a href="{{ route('home') }}">Inicio</a></li>
             <li class=""><a href="{{ route('autoridades') }}">Autoridades</a></li>
-            <li class=""><a href="#">Resoluciones</a></li>
+            <li class=""><a href="{{ route('jurisprudencias.userIndex') }}">Resoluciones</a></li>
             <li class=""><a href="{{ route('circunscripciones') }}">Circunscripciones</a></li>
             @guest
               <li class=""><a href="{{ route('login') }}">Iniciar sesion</a></li>

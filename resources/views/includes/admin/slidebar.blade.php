@@ -63,13 +63,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{ route('categorias.create') }}" class="nav-link">
                 <i class="fa fa-sitemap nav-icon"></i>
                 <p>Categorías</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{ route('jurisprudencias.create') }}" class="nav-link">
                 <i class="fa fa-file-upload nav-icon"></i>
                 <p>Cargar Jurisprudencias</p>
               </a>

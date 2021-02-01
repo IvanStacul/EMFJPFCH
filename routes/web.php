@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ActivationTokenController, AmountsController, AuthorityController, HomeController, NewsController, PanelController, TrashController, VideoController};
+use App\Http\Controllers\{ActivationTokenController, AmountsController, AuthorityController, CaseLawController, CategoryController, HomeController, NewsController, PanelController, TrashController, VideoController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -91,6 +91,9 @@ Route::view(
 Route::get('autoridades', [AuthorityController::class, 'page'])
   ->name('autoridades');
 
+Route::get('jurisprudencias/{categoria?}/', [CaseLawController::class, 'userIndex'])
+  ->name('jurisprudencias.userIndex');
+
 Route::view(
   'circunscripciones',
   'circunscripciones',
@@ -114,8 +117,14 @@ Route::get(
 
 // ------------------AUTH ROUTES------------------
 
-// Auth::routes(['login', 'logout', 'register', 'reset', 'confirm', 'verify']);
-Auth::routes(['register', 'reset', 'confirm', 'verify']);
+Auth::routes([
+  // 'login' => false,
+  // 'logout' => false,
+  'register' => false,
+  'reset' => false,
+  'confirm' => false,
+  'verify' => false,
+]);
 
 Route::get(
   'activate/{token}',
@@ -140,6 +149,16 @@ Route::resource('panel/videos', VideoController::class)
 Route::resource('panel/autoridades', AuthorityController::class)
   ->except('show')
   ->parameter('autoridades', 'authority')
+  ->middleware('auth');
+
+Route::resource('panel/categorias', CategoryController::class)
+  ->except('show', 'index')
+  ->parameters(['categorias' => 'category'])
+  ->middleware('auth');
+
+Route::resource('panel/jurisprudencias', CaseLawController::class)
+  ->except('show')
+  ->parameter('jurisprudencias', 'caseLaw')
   ->middleware('auth');
 
 Route::patch(
