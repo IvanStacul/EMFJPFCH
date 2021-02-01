@@ -30,7 +30,7 @@
     <ul class="nav nav-icons nav-icons-selected">
 
       <li class="active">
-        <a href="#">
+        <a href="{{ route('afiliacion.info') }}">
           <i class="fa fa-users bg-primary"></i>
           <span>Afiliación a la entidad</span>
         </a>

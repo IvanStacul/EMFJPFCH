@@ -14,7 +14,7 @@
           <li><a href="{{ route('circunscripciones') }}">Circunscripciones</a></li>
           <li><a href="{{ route('montos') }}">Competencias y montos</a></li>
           <li><a href="{{ route('balances') }}">Balances</a></li>
-          <li><a href="#">Afiliación a la entidad</a></li>
+          <li><a href="{{ route('afiliacion.info') }}">Afiliación a la entidad</a></li>
         </ul>
       </div>
 

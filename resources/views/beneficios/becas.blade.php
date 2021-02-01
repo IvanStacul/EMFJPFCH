@@ -117,7 +117,7 @@
                     <div class="alert alert-info m-t-1">
                       <p>
                         Recordá que podés ser aliado de la entidad ingresando a
-                        <a href="#">Afiliación a la entidad</a>.
+                        <a href="{{ route('afiliacion.info') }}">Afiliación a la entidad</a>.
                       </p>
                     </div>
 

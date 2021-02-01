@@ -77,7 +77,7 @@
                           <p>
                             Recordá que podés ser afiliado de la entidad
                             ingresando a
-                            <a href="#">
+                            <a href="{{ route('afiliacion.info') }}">
                               Afiliación a la entidad
                             </a>
                           </p>
