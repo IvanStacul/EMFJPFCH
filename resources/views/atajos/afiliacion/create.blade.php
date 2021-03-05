@@ -100,7 +100,7 @@
                 <div class="col-md-12 form-group item-form">
                   <label for="home_address">Domicilio Particular</label>
                   <input type="text" name="home_address" class="form-control" required
-                    value=" {{ old('home_address','Jose Alonso') }} " />
+                    value=" {{ old('home_address','Avenida Siempreviva 742') }} " />
                   <p class="help-block error hidden">
                     Ingresá tu domicilio
                   </p>
@@ -193,7 +193,7 @@
                       <div class="input-group">
                         <span class="input-group-addon">15</span>
                         <input aria-label="número de teléfono móvil" class="form-control" required
-                          value="{{ old('work_phone', 327177) }}" type="text" name="work_phone" />
+                          value="{{ old('work_phone', 123456) }}" type="text" name="work_phone" />
                       </div>
                       <p class="help-block error hidden">
                         Ingresá tu número de teléfono móvil
