@@ -33,7 +33,11 @@ class CaseLawController extends Controller
     $categorias = Category::all();
 
     // primer categoria
-    $category = Category::first()->id;
+    $category = Category::first();
+
+    if(isset($category)){
+      $category = $category->id;
+    }
 
     // Si la categoria(filtro) no es nula
     if($categoria!=null){
